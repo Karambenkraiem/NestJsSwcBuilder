@@ -1,0 +1,5 @@
+-- AlterTable
+ALTER TABLE `User` ADD COLUMN `postId` VARCHAR(191) NULL;
+
+-- AddForeignKey
+ALTER TABLE `User` ADD CONSTRAINT `User_postId_fkey` FOREIGN KEY (`postId`) REFERENCES `Post`(`id`) ON DELETE SET NULL ON UPDATE CASCADE;
